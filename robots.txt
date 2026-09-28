@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velasnardo.com.br/sitemap.xml
