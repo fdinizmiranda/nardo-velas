@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nardo - Velas Aromáticas | Lembrancinhas e Presentes Personalizados</title>
+<meta name="description" content="Velas aromáticas artesanais para casamentos, aniversários, noivados e chás de bebê. Aromas que inspiram fé, luz que aproxima de Jesus. Encomendas pelo WhatsApp.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nardo Velas Aromáticas">
+<link rel="canonical" href="https://velasnardo.com.br/">
+<link rel="icon" type="image/png" href="assets/logo-nardo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Nardo Velas Aromáticas">
+<meta property="og:title" content="Nardo - Velas Aromáticas | Aromas que inspiram fé">
+<meta property="og:description" content="Velas aromáticas artesanais para casamentos, aniversários, noivados e chás de bebê. Luz que aproxima de Jesus.">
+<meta property="og:url" content="https://velasnardo.com.br/">
+<meta property="og:image" content="https://velasnardo.com.br/assets/og-nardo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nardo - Velas Aromáticas">
+<meta name="twitter:description" content="Aromas que inspiram fé, luz que aproxima de Jesus. Encomendas pelo WhatsApp.">
+<meta name="twitter:image" content="https://velasnardo.com.br/assets/og-nardo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --creme: #FAF6EC;
+    --creme-esc: #F0E9D8;
+    --salvia: #8A9678;
+    --salvia-esc: #6E7A5C;
+    --dourado: #E8DCC0;
+    --grafite: #2B2B26;
+    --grafite-suave: #4A4A42;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--creme);
+    color: var(--grafite-suave);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(138,150,120,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(240,233,216,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #FAF6EC 0%, #F5EFE0 45%, #FAF6EC 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .25;
+    background-image: radial-gradient(rgba(138,150,120,.08) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .progress {
+    position: fixed; top: 0; left: 0;
+    height: 3px; width: 0; z-index: 1000;
+    background: linear-gradient(90deg, #8A9678, #E8DCC0, #8A9678);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+    transition: width .2s ease;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(250,246,236,.82); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(138,150,120,.15);
+    transition: padding .3s ease, background .3s ease;
+  }
+  .nav-bar.scrolled { padding: 10px 40px; background: rgba(250,246,236,.95); box-shadow: 0 4px 20px rgba(43,43,38,.06); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; letter-spacing: .04em; color: var(--grafite); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 38px; height: 38px; object-fit: contain; }
+  .nav-links { display: flex; gap: 26px; list-style: none; }
+  .nav-links a { color: var(--grafite-suave); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover { color: var(--salvia-esc); }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, var(--salvia), var(--salvia-esc)); color: var(--creme); font-weight: 700; font-size: 13px; text-decoration: none; letter-spacing: .02em; transition: all .3s ease; cursor: pointer; border: none; font-family: 'Poppins', sans-serif; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(138,150,120,.4); filter: brightness(1.05); }
+
+  .content { padding: 100px 64px 60px; max-width: 1100px; margin: 0 auto; }
+
+  section { margin-bottom: 120px; scroll-margin-top: 100px; }
+  section h2 { font-size: clamp(32px, 5vw, 46px); margin-bottom: 32px; font-weight: 800; letter-spacing: -.02em; }
+
+  h1 { font-family: 'Playfair Display', serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: var(--grafite); }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; color: var(--grafite); }
+  h3 { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -.01em; color: var(--grafite); }
+  p, span, li { font-weight: 400; line-height: 1.7; color: var(--grafite-suave); }
+
+  .gt {
+    background: linear-gradient(135deg, #8A9678 0%, #E8DCC0 50%, #8A9678 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .gl { width: 72px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, #8A9678, #E8DCC0); margin-bottom: 22px; animation: lineG .8s ease both; transform-origin: left; }
+  .gl.ce { margin: 0 auto 22px; transform-origin: center; }
+
+  .badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 20px; border-radius: 999px; background: rgba(138,150,120,.12); border: 1px solid rgba(138,150,120,.3); font-size: 13px; font-weight: 600; color: var(--salvia-esc); letter-spacing: .04em; text-transform: uppercase; }
+
+  .card { background: rgba(255,255,255,.55); border: 1px solid rgba(138,150,120,.15); border-radius: 22px; box-shadow: 0 16px 40px rgba(43,43,38,.06), inset 0 1px 0 rgba(255,255,255,.4); padding: 32px 28px; backdrop-filter: blur(6px); transition: transform .5s cubic-bezier(.22,1,.36,1), border-color .4s ease, box-shadow .4s ease, background .4s ease; position: relative; overflow: hidden; }
+  .card:hover { border-color: rgba(138,150,120,.4); transform: translateY(-6px) scale(1.01); box-shadow: 0 28px 60px rgba(43,43,38,.1); background: rgba(255,255,255,.8); }
+
+  /* HERO */
+  #hero { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 60px 0 40px; }
+  #hero .hero-logo { width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; }
+  #hero .hero-logo img { width: 110px; height: 110px; object-fit: contain; }
+  #hero h1 { font-size: clamp(42px, 8vw, 78px); margin-bottom: 20px; }
+  #hero .hero-subtitle { font-size: clamp(17px, 2.2vw, 23px); color: var(--grafite-suave); margin-bottom: 16px; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto; }
+  #hero .hero-tagline { font-size: 13px; color: var(--salvia-esc); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; margin-bottom: 40px; }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; border-radius: 999px; background: linear-gradient(135deg, var(--salvia), var(--salvia-esc)); color: var(--creme); font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(138,150,120,.3); letter-spacing: .01em; cursor: pointer; border: none; font-family: 'Poppins', sans-serif; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(138,150,120,.45); filter: brightness(1.06); }
+
+  .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 14px 34px; border-radius: 999px; background: transparent; border: 2px solid rgba(138,150,120,.5); color: var(--salvia-esc); font-weight: 600; font-size: 15px; text-decoration: none; transition: all .3s ease; font-family: 'Poppins', sans-serif; cursor: pointer; }
+  .btn-outline:hover { background: rgba(138,150,120,.08); border-color: var(--salvia); transform: translateY(-3px); }
+
+  /* STATS */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; max-width: 900px; margin: 48px auto 0; }
+  .stats-grid > div { transition: transform .4s ease; cursor: default; }
+  .stats-grid > div:hover .stat-big { transform: scale(1.08) translateY(-4px); }
+  .stat-big { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; margin-bottom: 8px; display: inline-block; transition: transform .4s cubic-bezier(.22,1,.36,1); color: var(--salvia-esc); }
+  .stat-label { font-size: 12px; color: rgba(74,74,66,.65); letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+
+  /* ORIGEM */
+  .problema-destaque { font-size: clamp(20px, 3vw, 26px); line-height: 1.5; color: var(--grafite); font-weight: 600; font-family: 'Playfair Display', serif; margin-bottom: 0; text-align: center; padding: 32px; background: rgba(138,150,120,.06); border-radius: 20px; border-left: 4px solid var(--salvia); }
+
+  /* CARDS COM IMAGEM */
+  .card-img-wrapper { position: relative; width: calc(100% + 56px); margin: -28px -28px 20px -28px; height: 200px; overflow: hidden; border-radius: 22px 22px 0 0; }
+  .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+  .card:hover .card-img-wrapper img { transform: scale(1.06); }
+  .card-img-wrapper::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, rgba(43,43,38,.35) 0%, transparent 100%); pointer-events: none; }
+
+  /* METODO / PROCESSO */
+  .metodo-intro { margin-bottom: 48px; }
+  .metodo-fases { display: flex; flex-direction: column; gap: 24px; }
+  .metodo-fase { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: start; padding: 32px 30px; border-radius: 22px; background: rgba(255,255,255,.5); border: 1px solid rgba(138,150,120,.15); transition: border-color .4s ease, background .3s ease; }
+  .metodo-fase:hover { border-color: rgba(138,150,120,.35); background: rgba(255,255,255,.8); }
+  .metodo-fase-num { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--salvia-esc); margin-bottom: 10px; }
+  .metodo-fase h3 { font-size: 24px; margin-bottom: 8px; line-height: 1.2; }
+  .metodo-fase-texto p { font-size: 15px; line-height: 1.75; color: var(--grafite-suave); }
+
+  /* DIFERENCIAIS / OCASIOES */
+  .dif-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .dif-card { padding: 28px 24px; }
+  .dif-card h3 { font-size: 19px; margin-bottom: 10px; }
+  .dif-card p { font-size: 14px; color: var(--grafite-suave); line-height: 1.65; }
+
+  /* PARA QUEM */
+  .para-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .para-card { padding: 32px 28px; }
+  .para-card h3 { font-size: 18px; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .para-card ul { list-style: none; }
+  .para-card li { font-size: 14px; line-height: 1.8; padding-left: 22px; position: relative; margin-bottom: 8px; }
+  .para-card li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--salvia); }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 820px; }
+  .faq-item { background: rgba(255,255,255,.5); border: 1px solid rgba(138,150,120,.15); border-radius: 16px; overflow: hidden; transition: border-color .3s ease, background .3s ease; }
+  .faq-item:hover { border-color: rgba(138,150,120,.35); background: rgba(255,255,255,.75); }
+  .faq-question { width: 100%; padding: 22px 24px; background: none; border: none; color: var(--grafite); font-size: 16px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: 'Poppins', sans-serif; transition: color .3s ease; }
+  .faq-question:hover { color: var(--salvia-esc); }
+  .faq-question svg { flex-shrink: 0; width: 20px; height: 20px; color: var(--salvia-esc); transition: transform .3s ease; }
+  .faq-item.open .faq-question svg { transform: rotate(180deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .4s ease; }
+  .faq-item.open .faq-answer { max-height: 400px; padding: 0 24px 22px; }
+  .faq-answer p { font-size: 15px; line-height: 1.75; color: var(--grafite-suave); }
+
+  /* SOBRE */
+  .sobre-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
+  .sobre-foto { width: 100%; aspect-ratio: 1; border-radius: 24px; object-fit: cover; border: 1px solid rgba(138,150,120,.3); box-shadow: 0 20px 50px rgba(43,43,38,.12); }
+  .sobre-texto p { font-size: 16px; line-height: 1.9; margin-bottom: 18px; }
+  .sobre-texto p strong { color: var(--grafite); font-weight: 600; }
+  .sobre-quote { border-left: 3px solid var(--salvia); padding-left: 24px; margin: 28px 0; font-size: 20px; line-height: 1.6; color: var(--grafite); font-weight: 600; font-style: italic; font-family: 'Playfair Display', serif; }
+
+  /* TIME */
+  .time-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 640px; margin: 0 auto; }
+  .time-card { text-align: center; padding: 40px 32px; }
+  .tm-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 2px solid rgba(138,150,120,.4); box-shadow: 0 12px 32px rgba(43,43,38,.15); }
+  .time-card h3 { font-size: 21px; margin-bottom: 6px; }
+  .tm-role { font-size: 13px; color: var(--salvia-esc); font-weight: 600; letter-spacing: .03em; text-transform: uppercase; margin-bottom: 16px; }
+  .time-card p { font-size: 14px; color: var(--grafite-suave); line-height: 1.7; }
+
+  /* CTA */
+  .cta-inner { text-align: center; padding: 64px 48px; background: linear-gradient(145deg, rgba(138,150,120,.1), rgba(232,220,192,.2)); border: 1px solid rgba(138,150,120,.25); border-radius: 28px; position: relative; overflow: hidden; }
+  .cta-inner h2 { font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; }
+  .cta-inner p { font-size: 16px; color: var(--grafite-suave); max-width: 620px; margin: 0 auto 40px; line-height: 1.8; }
+  .cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .cta-linksub { margin-top: 22px; font-size: 13px; color: var(--grafite-suave); }
+  .cta-linksub a { color: var(--salvia-esc); text-decoration: underline; }
+
+  /* CONTATO */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .contact-card { padding: 22px 24px; display: flex; align-items: center; gap: 16px; transition: transform .4s ease, border-color .3s ease, box-shadow .3s ease; }
+  .contact-card:hover { border-color: rgba(138,150,120,.4); transform: translateY(-4px); box-shadow: 0 16px 36px rgba(138,150,120,.15); }
+  .contact-card .ct-ic { width: 44px; height: 44px; border-radius: 13px; background: rgba(138,150,120,.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-card .ct-ic svg { width: 20px; height: 20px; color: var(--salvia-esc); }
+  .contact-card .ct-info { min-width: 0; flex: 1; }
+  .contact-card .ct-lbl { font-size: 11px; color: rgba(74,74,66,.5); letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .contact-card .ct-val { font-size: 14px; color: var(--grafite); font-weight: 600; }
+  .contact-card .ct-val a { color: var(--grafite); text-decoration: none; }
+  .contact-card .ct-val a:hover { color: var(--salvia-esc); }
+
+  .section-lead { margin-bottom: 40px; max-width: 880px; font-size: 17px; line-height: 1.85; }
+  .section-lead.sm { max-width: 780px; font-size: 16px; }
+  .section-lead.ce { margin: 0 auto 40px; text-align: center; }
+
+  /* MODAL */
+  .modal-overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(43,43,38,.5); backdrop-filter: blur(10px); display: flex; align-items: flex-start; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .4s ease; overflow-y: auto; }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal-box { background: var(--creme); border: 1px solid rgba(138,150,120,.25); border-radius: 28px; padding: 48px 44px; max-width: 500px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 40px 90px rgba(43,43,38,.3); transform: translateY(30px) scale(.96); transition: transform .4s cubic-bezier(.22,1,.36,1); margin: auto 0; }
+  .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
+  .modal-close { position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 10px; background: rgba(138,150,120,.1); border: 1px solid rgba(138,150,120,.2); color: var(--salvia-esc); cursor: pointer; font-size: 18px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: all .3s ease; }
+  .modal-close:hover { background: rgba(138,150,120,.2); }
+  .modal-icon { width: 60px; height: 60px; border-radius: 18px; background: linear-gradient(135deg, rgba(138,150,120,.2), rgba(232,220,192,.3)); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+  .modal-icon svg { width: 28px; height: 28px; color: var(--salvia-esc); }
+  .modal-box h3 { font-size: 26px; margin-bottom: 10px; line-height: 1.25; }
+  .modal-box .modal-sub { font-size: 14px; color: var(--grafite-suave); line-height: 1.65; margin-bottom: 30px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--salvia-esc); letter-spacing: .05em; text-transform: uppercase; margin-bottom: 8px; }
+  .form-group input, .form-group select { width: 100%; padding: 13px 16px; background: rgba(255,255,255,.7); border: 1px solid rgba(138,150,120,.25); border-radius: 12px; color: var(--grafite); font-size: 15px; font-family: 'Poppins', sans-serif; transition: border-color .3s ease; outline: none; }
+  .form-group select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236E7A5C' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 44px; }
+  .form-group input::placeholder { color: rgba(74,74,66,.4); }
+  .form-group input:focus, .form-group select:focus { border-color: var(--salvia); box-shadow: 0 0 0 3px rgba(138,150,120,.12); }
+  .form-group.has-error input, .form-group.has-error select { border-color: #C97B63; }
+  .field-error { display: none; font-size: 12px; color: #C97B63; margin-top: 6px; }
+  .field-error.show { display: block; }
+  .form-submit { width: 100%; margin-top: 8px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(135deg, var(--salvia), var(--salvia-esc)); color: var(--creme); font-weight: 700; font-size: 15px; letter-spacing: .01em; border: none; cursor: pointer; transition: all .3s ease; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .form-submit:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.06); }
+
+  /* CTA FIXO MOBILE */
+  .mobile-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1200; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(250,246,236,.97); backdrop-filter: blur(16px); border-top: 1px solid rgba(138,150,120,.2); box-shadow: 0 -8px 24px rgba(43,43,38,.08); display: none; }
+  .mobile-cta-bar .mc-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; border-radius: 999px; background: linear-gradient(135deg, var(--salvia), var(--salvia-esc)); color: var(--creme); font-weight: 700; font-size: 15px; border: none; cursor: pointer; text-decoration: none; }
+
+  /* FOOTER */
+  .footer-bar { text-align: center; padding: 40px 0 100px; border-top: 1px solid rgba(138,150,120,.15); }
+  .footer-bar p { font-size: 13px; color: rgba(74,74,66,.5); letter-spacing: .03em; }
+  .footer-links { margin-top: 14px; }
+  .footer-links a { color: rgba(74,74,66,.6); text-decoration: none; font-size: 13px; }
+  .footer-links a:hover { color: var(--salvia-esc); }
+  .footer-links span { color: rgba(74,74,66,.3); margin: 0 8px; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: var(--grafite); cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+  @keyframes lineG { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(35px) } to { opacity: 1; transform: translateY(0) } }
+  @keyframes fadeScale { from { opacity: 0; transform: scale(.92) } to { opacity: 1; transform: scale(1) } }
+
+  .au { opacity: 0; animation: fadeUp .8s ease both; animation-play-state: paused; }
+  .as { opacity: 0; animation: fadeScale .8s ease both; animation-play-state: paused; }
+  .au.in-view, .as.in-view { animation-play-state: running; }
+  .d1 { animation-delay: .1s } .d2 { animation-delay: .22s } .d3 { animation-delay: .34s }
+  .d4 { animation-delay: .46s } .d5 { animation-delay: .58s } .d6 { animation-delay: .7s }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-bar.scrolled { padding: 10px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,246,236,.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(138,150,120,.15); padding: 20px; gap: 16px; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .content { padding: 80px 20px 60px; max-width: 100%; }
+    .cta-inner { padding: 40px 24px; }
+    .modal-box { padding: 40px 26px; max-height: 85vh; }
+    .sobre-grid { grid-template-columns: 1fr; }
+    .sobre-foto { max-width: 240px; margin: 0 auto; }
+    .section-lead { font-size: 16px; max-width: 100%; }
+    .metodo-fase { grid-template-columns: 1fr; gap: 16px; padding: 26px 22px; }
+    .para-grid { grid-template-columns: 1fr; }
+    .dif-grid, .stats-grid, .contact-grid { grid-template-columns: 1fr; }
+    .mobile-cta-bar { display: block; }
+    .footer-bar { padding-bottom: 100px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://velasnardo.com.br/#website",
+      "url": "https://velasnardo.com.br/",
+      "name": "Nardo Velas Aromáticas",
+      "description": "Velas aromáticas artesanais para casamentos, aniversários, noivados e chás de bebê.",
+      "publisher": { "@id": "https://velasnardo.com.br/#empresa" },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Store",
+      "@id": "https://velasnardo.com.br/#empresa",
+      "name": "Nardo Velas Aromáticas",
+      "description": "Velas aromáticas artesanais feitas à mão, personalizadas para casamentos, aniversários, noivados, chás de bebê e presentes. Empresa cristã, cada vela leva um devocional via tag NFC.",
+      "url": "https://velasnardo.com.br/",
+      "logo": "https://velasnardo.com.br/assets/logo-nardo.png",
+      "image": "https://velasnardo.com.br/assets/logo-nardo.png",
+      "slogan": "Aromas que inspiram fé, luz que aproxima de Jesus",
+      "priceRange": "$$",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://instagram.com/nardovelasaromaticas"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://velasnardo.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual o prazo de entrega das velas personalizadas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O prazo varia de acordo com a quantidade e a personalização escolhida. Para eventos, recomendamos encomendar com pelo menos 20 dias de antecedência." }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso escolher o aroma e a cor da vela?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Você escolhe entre diversos aromas e a paleta de cores da Nardo, podendo combinar com o tema do seu evento." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a tag NFC nas velas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Cada vela Nardo leva uma tag NFC. Ao aproximar o celular, a pessoa acessa um devocional exclusivo, evangélico, escolhido conforme a ocasião." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a quantidade mínima para lembrancinhas de casamento?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Trabalhamos com pedidos a partir de pequenas quantidades. Fale com a gente pelo WhatsApp para simular seu orçamento." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+    <div class="modal-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c1 3 3 5 3 8a3 3 0 11-6 0c0-3 2-5 3-8z"/><path d="M5 21h14"/></svg>
+    </div>
+    <h3>Vamos criar sua <span class="gt">lembrancinha</span>?</h3>
+    <p class="modal-sub">Conte um pouco sobre o seu evento. Te respondemos pelo WhatsApp com o orçamento e opções de aroma e cor.</p>
+    <form id="captureForm" novalidate>
+      <div class="form-group">
+        <label for="inputNome">Nome</label>
+        <input type="text" id="inputNome" placeholder="Seu nome" required>
+        <div class="field-error">Informe seu nome.</div>
+      </div>
+      <div class="form-group">
+        <label for="inputWhatsapp">WhatsApp</label>
+        <input type="tel" id="inputWhatsapp" placeholder="(41) 99999-9999" required>
+        <div class="field-error">Informe um WhatsApp válido.</div>
+      </div>
+      <div class="form-group">
+        <label for="inputEvento">Tipo de evento</label>
+        <select id="inputEvento" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="Casamento">Casamento</option>
+          <option value="Aniversário">Aniversário</option>
+          <option value="Noivado">Noivado</option>
+          <option value="Chá de bebê">Chá de bebê</option>
+          <option value="Presente personalizado">Presente personalizado</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <div class="field-error">Selecione o tipo de evento.</div>
+      </div>
+      <div class="form-group">
+        <label for="inputData">Data do evento (aproximada)</label>
+        <input type="text" id="inputData" placeholder="Ex: 15/12/2026">
+      </div>
+      <div class="form-group">
+        <label for="inputQtd">Quantidade estimada</label>
+        <input type="text" id="inputQtd" placeholder="Ex: 50 velas" required>
+        <div class="field-error">Informe a quantidade estimada.</div>
+      </div>
+      <button type="submit" class="form-submit" id="formSubmitBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="progress" id="prog"></div>
+
+<nav class="nav-bar" id="navBar">
+  <a href="#hero" class="nav-logo">
+    <img src="assets/logo-nardo.png" alt="Nardo Velas Aromáticas" width="38" height="38">
+    NARDO
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#origem">Nossa História</a></li>
+    <li><a href="#ocasioes">Ocasiões</a></li>
+    <li><a href="#processo">Como Funciona</a></li>
+    <li><a href="#devocionais">Devocionais</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#sobre">Sobre Nós</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <button class="nav-cta desktop-only" onclick="openModal()">Fazer Encomenda</button>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main class="content">
+
+  <section id="hero">
+    <div class="hero-logo as">
+      <img src="assets/logo-nardo.png" alt="Nardo Velas Aromáticas" width="110" height="110">
+    </div>
+    <div class="badge au d1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2c1 3 3 5 3 8a3 3 0 11-6 0c0-3 2-5 3-8z"/><path d="M5 21h14"/></svg>
+      Velas Aromáticas Artesanais
+    </div>
+    <h1 class="au d2" style="margin-top:24px;">Aromas que <span class="gt">inspiram fé</span></h1>
+    <p class="hero-subtitle au d3">Luz que aproxima de Jesus. Velas feitas à mão para casamentos, aniversários, noivados e chás de bebê. Cada gesto carrega um grande significado.</p>
+    <p class="hero-tagline au d4">FEITAS À MÃO · COM CUIDADO · COM PROPÓSITO</p>
+    <div class="hero-buttons au d5">
+      <a class="btn-primary" href="https://wa.me/5541995922272" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Fazer Encomenda
+      </a>
+      <a href="#origem" class="btn-outline">Nossa História</a>
+    </div>
+    <div class="stats-grid au d6">
+      <div>
+        <div class="stat-big">100%</div>
+        <div class="stat-label">Feitas à mão</div>
+      </div>
+      <div>
+        <div class="stat-big">+30</div>
+        <div class="stat-label">Opções de aroma</div>
+      </div>
+      <div>
+        <div class="stat-big" style="font-size:32px;">Fé & Amor</div>
+        <div class="stat-label">Em cada detalhe</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="origem">
+    <div class="gl au ce" style="margin:0 auto 22px;"></div>
+    <h2 class="au d1" style="text-align:center;">Tudo começou com <span class="gt">um aroma</span></h2>
+    <p class="au d2 section-lead ce">
+      Na Bíblia, há uma passagem que nos marcou profundamente: uma mulher tomou um frasco de nardo puro, um unguento precioso, e ungiu os pés de Jesus. A casa inteira se encheu do perfume daquele gesto de amor. 🕊️
+    </p>
+    <p class="au d3 section-lead ce">
+      Foi dali que nasceu o nosso nome. E o nosso propósito. A Nardo é mais do que velas aromáticas. É um convite para que cada ambiente, e cada coração, seja preenchido por um aroma que acolhe, que lembra, que transforma.
+    </p>
+    <p class="au d4 section-lead ce">
+      Cada vela que produzimos é feita à mão, com cuidado, com intenção. Seja para marcar um casamento, um aniversário, ou para dizer "lembrei de você" em um dia comum. ✨
+    </p>
+    <div class="problema-destaque au d5">
+      "Porque acreditamos que pequenos gestos carregam grandes significados." <br><br>O aroma de Cristo que se espalha. 🤍
+    </div>
+  </section>
+
+  <section id="ocasioes">
+    <div class="gl au"></div>
+    <h2 class="au d1">Para cada <span class="gt">momento especial</span></h2>
+    <p class="au d2 section-lead sm">Nossas velas são pensadas para transformar lembrancinhas em memórias afetivas.</p>
+    <div class="dif-grid">
+      <div class="card dif-card au d2">
+        <div class="card-img-wrapper"><img src="assets/casamento.jpg" alt="Lembrancinha de vela para casamento" loading="lazy" width="400" height="200"></div>
+        <h3>💍 Casamentos</h3>
+        <p>Lembrancinhas personalizadas para os convidados levarem um pedaço do seu dia especial.</p>
+      </div>
+      <div class="card dif-card au d3">
+        <div class="card-img-wrapper"><img src="assets/aniversario.jpg" alt="Vela aromática para aniversário" loading="lazy" width="400" height="200"></div>
+        <h3>🎂 Aniversários</h3>
+        <p>Velas com aroma e nome do aniversariante, um mimo que marca a data com carinho.</p>
+      </div>
+      <div class="card dif-card au d4">
+        <div class="card-img-wrapper"><img src="assets/noivado.jpg" alt="Vela para noivado" loading="lazy" width="400" height="200"></div>
+        <h3>💕 Noivados</h3>
+        <p>Detalhes aromáticos para eternizar o pedido de sim e celebrar essa nova fase.</p>
+      </div>
+      <div class="card dif-card au d5">
+        <div class="card-img-wrapper"><img src="assets/chadebebe.jpg" alt="Lembrancinha de chá de bebê" loading="lazy" width="400" height="200"></div>
+        <h3>👶 Chá de Bebê</h3>
+        <p>Lembrancinhas delicadas para celebrar a chegada do bebê com muita ternura.</p>
+      </div>
+      <div class="card dif-card au d2">
+        <div class="card-img-wrapper"><img src="assets/presente.jpg" alt="Vela como presente personalizado" loading="lazy" width="400" height="200"></div>
+        <h3>🎁 Presentes</h3>
+        <p>Para dizer "lembrei de você" em qualquer dia. Personalização total no aroma e na cor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo">
+    <div class="gl au"></div>
+    <h2 class="au d1">Como <span class="gt">nasce cada vela</span></h2>
+    <p class="au d2 section-lead sm">Um processo simples, pensado para que você participe de cada escolha.</p>
+
+    <div class="metodo-fases">
+      <div class="metodo-fase au d2">
+        <div>
+          <div class="metodo-fase-num">Etapa 1</div>
+          <h3>Escolha o aroma e a cor</h3>
+        </div>
+        <div class="metodo-fase-texto">
+          <p>Você escolhe entre a nossa paleta de aromas e as cores da Nardo, combinando com o tema do seu evento.</p>
+        </div>
+      </div>
+      <div class="metodo-fase au d3">
+        <div>
+          <div class="metodo-fase-num">Etapa 2</div>
+          <h3>Personalizamos com cuidado</h3>
+        </div>
+        <div class="metodo-fase-texto">
+          <p>Nomes, datas, mensagens especiais. Cada vela é feita à mão, uma por uma, com atenção aos detalhes.</p>
+        </div>
+      </div>
+      <div class="metodo-fase au d4">
+        <div>
+          <div class="metodo-fase-num">Etapa 3</div>
+          <h3>Entregamos com a tag NFC</h3>
+        </div>
+        <div class="metodo-fase-texto">
+          <p>Cada vela leva uma tag exclusiva. Ao aproximar o celular, a pessoa acessa um devocional gratuito e evangélico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="devocionais">
+    <div class="gl au"></div>
+    <h2 class="au d1">Cada vela leva um <span class="gt">devocional</span></h2>
+    <p class="au d2 section-lead sm">Além do aroma, cada vela Nardo carrega uma palavra de fé. Basta aproximar o celular na tag para receber uma mensagem para o seu momento.</p>
+    <div class="dif-grid">
+      <div class="card dif-card au d2">
+        <h3>🤍 Para Mães</h3>
+        <p>Palavras de gratidão e força para quem exerce o dom de cuidar.</p>
+        <a href="devocional.html?tag=maes" class="btn-outline" style="margin-top:16px; padding:10px 24px; font-size:13px;">Ler exemplo</a>
+      </div>
+      <div class="card dif-card au d3">
+        <h3>🌷 Para Mulheres</h3>
+        <p>Reflexões sobre identidade, propósito e a fé que sustenta.</p>
+        <a href="devocional.html?tag=mulheres" class="btn-outline" style="margin-top:16px; padding:10px 24px; font-size:13px;">Ler exemplo</a>
+      </div>
+      <div class="card dif-card au d4">
+        <h3>🎉 Para Aniversariantes</h3>
+        <p>Uma bênção para celebrar o novo ciclo que se inicia.</p>
+        <a href="devocional.html?tag=aniversariante" class="btn-outline" style="margin-top:16px; padding:10px 24px; font-size:13px;">Ler exemplo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="paraquem">
+    <div class="gl au"></div>
+    <h2 class="au d1">A Nardo é <span class="gt">para você?</span></h2>
+    <div class="para-grid">
+      <div class="card para-card au d2">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:#8A9678;"><polyline points="20 6 9 17 4 12"/></svg>
+          É para você se
+        </h3>
+        <ul>
+          <li>Está planejando um casamento, aniversário ou noivado</li>
+          <li>Busca lembrancinhas diferentes e com significado</li>
+          <li>Quer presentear alguém especial com algo feito à mão</li>
+          <li>Valoriza detalhes, cuidado e propósito de fé</li>
+        </ul>
+      </div>
+      <div class="card para-card au d3">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:#8A9678;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Prazo ideal
+        </h3>
+        <ul>
+          <li>Recomendamos encomendar com 20 a 30 dias de antecedência</li>
+          <li>Para grandes quantidades, procure com mais antecedência ainda</li>
+          <li>Sempre confirmamos prazo real na hora do orçamento</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="gl au"></div>
+    <h2 class="au d1">Perguntas <span class="gt">Frequentes</span></h2>
+    <div class="faq-list">
+      <div class="faq-item au d2">
+        <button class="faq-question">
+          <span>Qual o prazo de entrega das velas personalizadas?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>O prazo varia de acordo com a quantidade e a personalização escolhida. Para eventos, recomendamos encomendar com pelo menos 20 dias de antecedência.</p></div>
+      </div>
+      <div class="faq-item au d3">
+        <button class="faq-question">
+          <span>Posso escolher o aroma e a cor da vela?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Sim. Você escolhe entre diversos aromas e a paleta de cores da Nardo, podendo combinar com o tema do seu evento.</p></div>
+      </div>
+      <div class="faq-item au d4">
+        <button class="faq-question">
+          <span>O que é a tag NFC nas velas?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Cada vela Nardo leva uma tag NFC. Ao aproximar o celular, a pessoa acessa um devocional exclusivo, evangélico, escolhido conforme a ocasião.</p></div>
+      </div>
+      <div class="faq-item au d5">
+        <button class="faq-question">
+          <span>Qual a quantidade mínima para lembrancinhas de casamento?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><p>Trabalhamos com pedidos a partir de pequenas quantidades. Fale com a gente pelo WhatsApp para simular seu orçamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="gl au"></div>
+    <h2 class="au d1">De onde a <span class="gt">Nardo</span> vem</h2>
+    <div class="sobre-grid au d2">
+      <img src="assets/nardo-fundadoras.jpg" alt="Fundadoras da Nardo Velas Aromáticas" class="sobre-foto" width="280" height="280">
+      <div class="sobre-texto">
+        <p>Tudo começou com um aroma. Investimos em materiais e matéria-prima com o desejo de transformar um gesto simples em algo que carregasse significado. Foi ali que nasceu a <strong>Nardo</strong>.</p>
+        <div class="sobre-quote">"A casa inteira se encheu do perfume daquele gesto de amor."</div>
+        <p>Cada vela que produzimos é feita à mão, com cuidado e intenção. Seja para marcar um casamento, um aniversário, ou para dizer "lembrei de você" em um dia comum, acreditamos que <strong>pequenos gestos carregam grandes significados</strong>.</p>
+        <p>Bem-vindos ao nosso cantinho. Aqui, <strong>cada chama conta uma história</strong>. 🤍 O aroma de Cristo que se espalha.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta-final">
+    <div class="cta-inner as">
+      <div class="gl ce"></div>
+      <h2><span class="gt">Vamos criar</span> a sua lembrancinha?</h2>
+      <p>Conte pra gente sobre o seu evento e receba um orçamento personalizado, com opções de aroma e cor.</p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="https://wa.me/5541995922272" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <p class="cta-linksub">Prefere preencher um formulário rápido? <a href="#" onclick="openModal(); return false;">Clique aqui</a></p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="gl au"></div>
+    <h2 class="au d1">Fale com a <span class="gt">Nardo</span></h2>
+    <div class="contact-grid">
+      <div class="card contact-card au d2">
+        <div class="ct-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        </div>
+        <div class="ct-info">
+          <div class="ct-lbl">WhatsApp</div>
+          <div class="ct-val"><a href="https://wa.me/5541995922272" target="_blank" rel="noopener">Fale com a gente</a></div>
+        </div>
+      </div>
+      <div class="card contact-card au d3">
+        <div class="ct-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div class="ct-info">
+          <div class="ct-lbl">Instagram</div>
+          <div class="ct-val"><a href="https://instagram.com/nardovelasaromaticas" target="_blank" rel="noopener">@nardovelasaromaticas</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-bar">
+    <p>© 2026 Nardo Velas Aromáticas · velasnardo.com.br. Todos os direitos reservados.</p>
+    <p class="footer-links">
+      <a href="devocional.html">Devocionais</a>
+      <span>·</span>
+      <a href="#contato">Contato</a>
+    </p>
+  </div>
+
+</main>
+
+<div class="mobile-cta-bar" id="mobileCtaBar">
+  <a class="mc-btn" href="https://wa.me/5541995922272" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+    Fazer Encomenda
+  </a>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById('modalOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const item = this.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  document.getElementById('inputWhatsapp').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '').slice(0, 11);
+    if (v.length > 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+    else if (v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+    else if (v.length > 0) v = '(' + v;
+    this.value = v;
+  });
+
+  const campos = [
+    { id: 'inputNome', valid: v => v.trim() !== '' },
+    { id: 'inputWhatsapp', valid: v => v.replace(/\D/g,'').length >= 10 },
+    { id: 'inputEvento', valid: v => v !== '' },
+    { id: 'inputQtd', valid: v => v.trim() !== '' }
+  ];
+
+  function mostrarErro(id, mostrar) {
+    const group = document.getElementById(id).closest('.form-group');
+    const err = group.querySelector('.field-error');
+    if (mostrar) { group.classList.add('has-error'); if (err) err.classList.add('show'); }
+    else { group.classList.remove('has-error'); if (err) err.classList.remove('show'); }
+  }
+
+  campos.forEach(c => {
+    const el = document.getElementById(c.id);
+    el.addEventListener('input', () => mostrarErro(c.id, false));
+    el.addEventListener('change', () => mostrarErro(c.id, false));
+  });
+
+  document.getElementById('captureForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let valido = true;
+    campos.forEach(c => {
+      const el = document.getElementById(c.id);
+      if (!c.valid(el.value)) { mostrarErro(c.id, true); valido = false; }
+    });
+    if (!valido) return;
+
+    const nome = document.getElementById('inputNome').value.trim();
+    const whatsapp = document.getElementById('inputWhatsapp').value.trim();
+    const evento = document.getElementById('inputEvento').value;
+    const data = document.getElementById('inputData').value.trim();
+    const qtd = document.getElementById('inputQtd').value.trim();
+
+    const msg = `Olá! Meu nome é ${nome}.\nGostaria de um orçamento para: ${evento}\nData aproximada: ${data || 'a definir'}\nQuantidade estimada: ${qtd}\nMeu WhatsApp: ${whatsapp}`;
+
+    window.open(`https://wa.me/5541995922272?text=${encodeURIComponent(msg)}`, '_blank');
+    closeModal();
+  });
+
+  const prog = document.getElementById('prog');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  });
+
+  const navBar = document.getElementById('navBar');
+  window.addEventListener('scroll', () => {
+    navBar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  const animObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+  }, { threshold: .12 });
+  document.querySelectorAll('.au, .as').forEach(el => animObs.observe(el));
+</script>
+
+</body>
+</html>
