@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devocional | Nardo Velas Aromáticas</title>
+<meta name="description" content="Devocionais evangélicos exclusivos da Nardo Velas Aromáticas. Acesse pela tag NFC da sua vela e receba uma palavra de fé.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/png" href="assets/logo-nardo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --creme: #FAF6EC;
+    --creme-esc: #F0E9D8;
+    --salvia: #8A9678;
+    --salvia-esc: #6E7A5C;
+    --dourado: #E8DCC0;
+    --grafite: #2B2B26;
+    --grafite-suave: #4A4A42;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--creme);
+    color: var(--grafite-suave);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(700px 380px at 75% 10%, rgba(138,150,120,.12) 0%, transparent 45%),
+      radial-gradient(600px 320px at 20% 90%, rgba(232,220,192,.35) 0%, transparent 50%),
+      linear-gradient(180deg, #FAF6EC 0%, #F5EFE0 50%, #FAF6EC 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .25;
+    background-image: radial-gradient(rgba(138,150,120,.08) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .topbar {
+    width: 100%;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .topbar img { width: 34px; height: 34px; object-fit: contain; }
+  .topbar span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: .05em;
+    color: var(--grafite);
+  }
+
+  .wrap {
+    flex: 1;
+    width: 100%;
+    max-width: 620px;
+    padding: 20px 24px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .loading {
+    padding: 80px 0;
+    color: var(--salvia-esc);
+    font-size: 15px;
+    letter-spacing: .04em;
+  }
+
+  .card-dev {
+    width: 100%;
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(138,150,120,.2);
+    border-radius: 26px;
+    padding: 44px 32px;
+    box-shadow: 0 20px 50px rgba(43,43,38,.08);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    animation: fadeUp .7s ease .1s both;
+  }
+
+  .dev-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(138,150,120,.18), rgba(232,220,192,.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dev-icon svg { width: 28px; height: 28px; color: var(--salvia-esc); }
+
+  .dev-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--salvia-esc);
+    background: rgba(138,150,120,.1);
+    border: 1px solid rgba(138,150,120,.25);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  .dev-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 34px);
+    font-weight: 800;
+    color: var(--grafite);
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+
+  .dev-versiculo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--grafite);
+    line-height: 1.7;
+    border-left: 3px solid var(--salvia);
+    padding: 4px 0 4px 20px;
+    margin: 0 0 26px;
+    text-align: left;
+  }
+
+  .dev-texto {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: var(--grafite-suave);
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .dev-oracao {
+    margin-top: 26px;
+    padding: 22px 22px;
+    background: rgba(138,150,120,.08);
+    border-radius: 16px;
+    text-align: left;
+  }
+  .dev-oracao-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--salvia-esc);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .dev-oracao p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--grafite-suave);
+    font-style: italic;
+  }
+
+  .dev-assinatura {
+    margin-top: 30px;
+    font-size: 13px;
+    color: rgba(74,74,66,.55);
+    letter-spacing: .03em;
+  }
+  .dev-assinatura strong { color: var(--salvia-esc); }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+    opacity: 0;
+    animation: fadeUp .7s ease .3s both;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 15px 30px; border-radius: 999px;
+    background: linear-gradient(135deg, var(--salvia), var(--salvia-esc));
+    color: var(--creme); font-weight: 700; font-size: 15px;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 8px 26px rgba(138,150,120,.3);
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.06); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 13px 28px; border-radius: 999px;
+    background: transparent; border: 2px solid rgba(138,150,120,.4);
+    color: var(--salvia-esc); font-weight: 600; font-size: 14px;
+    text-decoration: none; transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  .btn-outline:hover { background: rgba(138,150,120,.08); border-color: var(--salvia); }
+
+  .outros-devocionais {
+    width: 100%;
+    margin-top: 46px;
+    opacity: 0;
+    animation: fadeUp .7s ease .4s both;
+  }
+  .outros-titulo {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(74,74,66,.5);
+    margin-bottom: 16px;
+  }
+  .outros-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .outro-link {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.5);
+    border: 1px solid rgba(138,150,120,.2);
+    color: var(--grafite-suave);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s ease;
+  }
+  .outro-link:hover {
+    border-color: var(--salvia);
+    background: rgba(138,150,120,.08);
+    color: var(--salvia-esc);
+  }
+  .outro-link.active {
+    background: var(--salvia);
+    color: var(--creme);
+    border-color: var(--salvia);
+  }
+
+  .footer-dev {
+    padding: 30px 0 10px;
+    font-size: 12px;
+    color: rgba(74,74,66,.4);
+    text-align: center;
+  }
+  .footer-dev a { color: var(--salvia-esc); text-decoration: none; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+
+  @media (max-width: 500px) {
+    .card-dev { padding: 34px 22px; }
+    .wrap { padding: 16px 18px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <img src="assets/logo-nardo.png" alt="Nardo Velas Aromáticas">
+  <span>NARDO</span>
+</div>
+
+<div class="wrap">
+  <div id="conteudo" class="loading">Abrindo seu devocional...</div>
+</div>
+
+<div class="footer-dev">
+  <p>🤍 Nardo Velas Aromáticas · <a href="index.html">voltar ao site</a></p>
+</div>
+
+<script>
+const devocionais = {
+  maes: {
+    tag: "Devocional para Mães",
+    titulo: "O Perfume do Seu Cuidado",
+    versiculo: '"Muitas mulheres se distinguiram por seus feitos, mas você a todas supera." — Provérbios 31:29',
+    texto: `Mãe, o seu cuidado silencioso é oração em forma de ação. Assim como o perfume do nardo se espalhou por toda a casa naquele gesto de amor, o carinho que você derrama todos os dias alcança gerações, mesmo quando parece que ninguém está vendo.
+
+Deus vê cada noite em claro, cada oração sussurrada pelo futuro dos seus filhos, cada esforço para sustentar a casa e o coração da família. Hoje, receba esta pausa: você não precisa carregar tudo sozinha. Ele mesmo é quem sustenta o que você já não consegue mais segurar.`,
+    oracao: "Senhor, obrigada por essa mãe. Renova as forças dela hoje, cobre seus filhos de proteção e enche sua casa com a paz que só Tu podes dar. Em nome de Jesus, amém."
+  },
+  mulheres: {
+    tag: "Devocional para Mulheres",
+    titulo: "Mais Preciosa que Rubis",
+    versiculo: '"Ela é mais preciosa que rubis." — Provérbios 3:15',
+    texto: `Sua identidade não está no que os outros esperam de você, nem na conta que ainda falta fechar, nem na comparação que o mundo insiste em fazer. Está em quem Deus disse que você é: amada antes de qualquer mérito, escolhida antes de qualquer esforço.
+
+Como o nardo puro derramado sem medida sobre os pés de Jesus, que a sua vida seja oferta de valor, não por perfeição, mas por entrega. Você é vista. Você é lembrada. E o que hoje parece pequeno aos seus olhos, é precioso aos olhos d'Ele.`,
+    oracao: "Pai, ajuda-me a ver a mim mesma como Tu me vês. Que eu descanse na certeza de que sou preciosa para Ti, hoje e sempre. Em nome de Jesus, amém."
+  },
+  aniversariante: {
+    tag: "Devocional para Aniversariantes",
+    titulo: "Um Novo Ciclo, Uma Nova Graça",
+    versiculo: '"Ele faz novas todas as coisas." — Apocalipse 21:5',
+    texto: `Um novo ano de vida é um convite a recomeçar com esperança. Cada volta ao sol carrega histórias, aprendizados, lágrimas e também muitas razões para agradecer.
+
+Que este novo ciclo seja preenchido de presença, propósito e da certeza de que Deus caminha ao seu lado em cada página que se abre a partir de hoje. Ele já conhece cada dia que ainda está por vir, e neles há planos de bem, de esperança, de um futuro cheio de graça.`,
+    oracao: "Senhor, obrigado pela vida que hoje se renova. Que este novo ano seja repleto da Tua presença, da Tua provisão e do Teu cuidado em cada detalhe. Em nome de Jesus, amém."
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const tagParam = params.get('tag') || 'mulheres';
+const d = devocionais[tagParam] || devocionais.mulheres;
+
+setTimeout(() => {
+  document.getElementById('conteudo').outerHTML = `
+    <div class="card-dev">
+      <div class="dev-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c1 3 3 5 3 8a3 3 0 11-6 0c0-3 2-5 3-8z"/><path d="M5 21h14"/></svg>
+      </div>
+      <span class="dev-tag">${d.tag}</span>
+      <h1 class="dev-titulo">${d.titulo}</h1>
+      <p class="dev-versiculo">${d.versiculo}</p>
+      <p class="dev-texto">${d.texto.replace(/\n\n/g, '</p><p class="dev-texto">')}</p>
+      <div class="dev-oracao">
+        <span class="dev-oracao-label">Oração</span>
+        <p>${d.oracao}</p>
+      </div>
+      <p class="dev-assinatura">🤍 <strong>Nardo</strong> · Aromas que inspiram fé, luz que aproxima de Jesus.</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn-primary" href="https://wa.me/5541995922272" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Fazer uma encomenda Nardo
+      </a>
+      <a class="btn-outline" href="index.html">Conhecer nossas velas</a>
+    </div>
+
+    <div class="outros-devocionais">
+      <div class="outros-titulo">Outros devocionais</div>
+      <div class="outros-grid" id="outrosGrid"></div>
+    </div>
+  `;
+
+  const nomes = { maes: "Para Mães", mulheres: "Para Mulheres", aniversariante: "Para Aniversariantes" };
+  const grid = document.getElementById('outrosGrid');
+  Object.keys(devocionais).forEach(key => {
+    const a = document.createElement('a');
+    a.href = `devocional.html?tag=${key}`;
+    a.className = 'outro-link' + (key === tagParam ? ' active' : '');
+    a.textContent = nomes[key];
+    grid.appendChild(a);
+  });
+}, 350);
+</script>
+
+</body>
+</html>
