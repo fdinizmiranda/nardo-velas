@@ -192,14 +192,6 @@
   .sobre-texto p strong { color: var(--grafite); font-weight: 600; }
   .sobre-quote { border-left: 3px solid var(--salvia); padding-left: 24px; margin: 28px 0; font-size: 20px; line-height: 1.6; color: var(--grafite); font-weight: 600; font-style: italic; font-family: 'Playfair Display', serif; }
 
-  /* TIME */
-  .time-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 640px; margin: 0 auto; }
-  .time-card { text-align: center; padding: 40px 32px; }
-  .tm-avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 2px solid rgba(138,150,120,.4); box-shadow: 0 12px 32px rgba(43,43,38,.15); }
-  .time-card h3 { font-size: 21px; margin-bottom: 6px; }
-  .tm-role { font-size: 13px; color: var(--salvia-esc); font-weight: 600; letter-spacing: .03em; text-transform: uppercase; margin-bottom: 16px; }
-  .time-card p { font-size: 14px; color: var(--grafite-suave); line-height: 1.7; }
-
   /* CTA */
   .cta-inner { text-align: center; padding: 64px 48px; background: linear-gradient(145deg, rgba(138,150,120,.1), rgba(232,220,192,.2)); border: 1px solid rgba(138,150,120,.25); border-radius: 28px; position: relative; overflow: hidden; }
   .cta-inner h2 { font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; }
@@ -244,8 +236,11 @@
   .form-group.has-error input, .form-group.has-error select { border-color: #C97B63; }
   .field-error { display: none; font-size: 12px; color: #C97B63; margin-top: 6px; }
   .field-error.show { display: block; }
+  .consent-group label a { color: var(--salvia-esc); }
+  .consent-group.has-error label { color: #C97B63; }
   .form-submit { width: 100%; margin-top: 8px; padding: 15px 24px; border-radius: 999px; background: linear-gradient(135deg, var(--salvia), var(--salvia-esc)); color: var(--creme); font-weight: 700; font-size: 15px; letter-spacing: .01em; border: none; cursor: pointer; transition: all .3s ease; display: flex; align-items: center; justify-content: center; gap: 10px; }
   .form-submit:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.06); }
+  .form-privacy { margin-top: 16px; text-align: center; font-size: 11.5px; color: rgba(74,74,66,.5); }
 
   /* CTA FIXO MOBILE */
   .mobile-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1200; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: rgba(250,246,236,.97); backdrop-filter: blur(16px); border-top: 1px solid rgba(138,150,120,.2); box-shadow: 0 -8px 24px rgba(43,43,38,.08); display: none; }
@@ -394,10 +389,21 @@
         <input type="text" id="inputQtd" placeholder="Ex: 50 velas" required>
         <div class="field-error">Informe a quantidade estimada.</div>
       </div>
+
+      <div class="form-group consent-group">
+        <label style="display:flex; align-items:flex-start; gap:10px; font-size:12.5px; line-height:1.6; color:var(--grafite-suave); cursor:pointer; text-transform:none;">
+          <input type="checkbox" id="lgpdConsent" style="margin-top:3px; width:16px; height:16px; flex-shrink:0; accent-color:var(--salvia); cursor:pointer;">
+          <span>Li e aceito a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a> e os <a href="termos-de-uso.html" target="_blank" rel="noopener">Termos de Uso</a>.</span>
+        </label>
+        <div class="field-error" id="lgpdError">Marque esta opção para continuar.</div>
+      </div>
+
       <button type="submit" class="form-submit" id="formSubmitBtn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
         Enviar pelo WhatsApp
       </button>
+
+      <p class="form-privacy">🔒 Seus dados estão seguros e não são compartilhados com terceiros.</p>
     </form>
   </div>
 </div>
@@ -691,6 +697,10 @@
   <div class="footer-bar">
     <p>© 2026 Nardo Velas Aromáticas · velasnardo.com.br. Todos os direitos reservados.</p>
     <p class="footer-links">
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      <span>·</span>
+      <a href="termos-de-uso.html">Termos de Uso</a>
+      <span>·</span>
       <a href="devocional.html">Devocionais</a>
       <span>·</span>
       <a href="#contato">Contato</a>
@@ -760,6 +770,14 @@
     el.addEventListener('change', () => mostrarErro(c.id, false));
   });
 
+  const lgpdConsent = document.getElementById('lgpdConsent');
+  lgpdConsent.addEventListener('change', function() {
+    if (this.checked) {
+      this.closest('.form-group').classList.remove('has-error');
+      document.getElementById('lgpdError').classList.remove('show');
+    }
+  });
+
   document.getElementById('captureForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -768,6 +786,14 @@
       const el = document.getElementById(c.id);
       if (!c.valid(el.value)) { mostrarErro(c.id, true); valido = false; }
     });
+
+    const consentGroup = lgpdConsent.closest('.form-group');
+    if (!lgpdConsent.checked) {
+      consentGroup.classList.add('has-error');
+      document.getElementById('lgpdError').classList.add('show');
+      valido = false;
+    }
+
     if (!valido) return;
 
     const nome = document.getElementById('inputNome').value.trim();
