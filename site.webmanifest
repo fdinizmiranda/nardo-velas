@@ -1,0 +1,20 @@
+{
+  "name": "Nardo Velas Aromáticas",
+  "short_name": "Nardo",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8A9678",
+  "background_color": "#FAF6EC",
+  "display": "standalone",
+  "start_url": "/"
+}
